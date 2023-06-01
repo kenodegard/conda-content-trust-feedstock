@@ -10,7 +10,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed -vv .
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - conda-content-trust=conda_content_trust.cli:cli
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.5
     - six
-    - cryptography
+    - cryptography <41
 
 test:
   source_files:
@@ -47,3 +47,4 @@ extra:
     - adriendelsalle
     - awwad
     - chenghlee
+    - kenodegard
